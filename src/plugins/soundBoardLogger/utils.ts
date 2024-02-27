@@ -1,6 +1,6 @@
 /*
  * Vencord, a Discord client mod
- * Copyright (c) 2023 Vendicated and contributors
+ * Copyright (c) 2024 Vendicated and contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -10,8 +10,6 @@ import { LazyComponent } from "@utils/react";
 import { saveFile } from "@utils/web";
 import { findByCode, findByProps, findByPropsLazy } from "@webpack";
 import type { User } from "discord-types/general";
-
-import settings from "./settings";
 
 export { User };
 
@@ -50,13 +48,16 @@ export const playSound = id => {
     audio.play();
 };
 
+const saveFileModule = findByPropsLazy("saveFile");
+
 export async function downloadAudio(id: string): Promise<void> {
-    const filename = id + settings.store.FileType;
-    const data = await fetch(`https://cdn.discordapp.com/soundboard-sounds/${id}`).then(e => e.arrayBuffer());
+    const filename = id + ".ogg";
+    const uri = `https://cdn.discordapp.com/soundboard-sounds/${id}`;
+    const data = await fetch(uri).then(e => e.arrayBuffer());
 
 
     if (IS_DISCORD_DESKTOP) {
-        DiscordNative.fileManager.saveWithDialog(data, filename);
+        saveFileModule.saveFile(uri, filename);
     } else {
         saveFile(new File([data], filename, { type: "audio/ogg" }));
     }
@@ -79,3 +80,4 @@ export function removeListener(fn): void {
 // Taken from https://github.com/Vendicated/Vencord/blob/86e94343cca10b950f2dc8d18d496d6db9f3b728/src/components/PluginSettings/PluginModal.tsx#L45
 export const UserSummaryItem = LazyComponent(() => findByCode("defaultRenderUser", "showDefaultAvatarsForNullUsers"));
 export const AvatarStyles = findByPropsLazy("moreUsers", "emptyUser", "avatarContainer", "clickableAvatar");
+// a

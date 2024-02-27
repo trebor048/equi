@@ -128,7 +128,7 @@ function VencordSettings() {
                             </Button>
                         )}
                         <Button
-                            onClick={() => VencordNative.native.openExternal("https://github.com/Equicord/Equicord")}
+                            onClick={() => VencordNative.native.openExternal("https://github.com/Vendicated/Vencord")}
                             size={Button.Sizes.SMALL}
                             disabled={settingsDirPending}>
                             Open in GitHub

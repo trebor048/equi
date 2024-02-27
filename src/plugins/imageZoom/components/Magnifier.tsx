@@ -123,15 +123,20 @@ export const Magnifier: React.FC<MagnifierProps> = ({ instance, size: initialSiz
         waitFor(() => instance.state.readyState === "READY", () => {
             const elem = document.getElementById(ELEMENT_ID) as HTMLDivElement;
             element.current = elem;
-            elem.firstElementChild!.setAttribute("draggable", "false");
+            if (elem.firstElementChild) {
+                elem.firstElementChild.setAttribute("draggable", "false");
+            }
             if (instance.props.animated) {
-                originalVideoElementRef.current = elem!.querySelector("video")!;
-                originalVideoElementRef.current.addEventListener("timeupdate", syncVideos);
+                originalVideoElementRef.current = elem.querySelector("video")!;
+                if (originalVideoElementRef.current) {
+                    originalVideoElementRef.current.addEventListener("timeupdate", syncVideos);
+                }
                 setReady(true);
             } else {
                 setReady(true);
             }
         });
+
         document.addEventListener("keydown", onKeyDown);
         document.addEventListener("keyup", onKeyUp);
         document.addEventListener("mousemove", updateMousePosition);

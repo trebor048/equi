@@ -309,3 +309,155 @@ export function NoEntrySignIcon(props: IconProps) {
         </Icon>
     );
 }
+import { fakeD } from "plugins/fake-deafen"; export const ScreenshareSettingsIcon =
+    (props: React.ComponentProps<"svg">) =>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1000"
+            height="1000"
+            viewBox="0 0 1000 1000"
+            {...props}
+        >
+            <defs>
+                <mask id="screenshareSettingsIconMask">
+                    <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M2 4.5c0-1.103.897-2 2-2h16c1.103 0 2 .897 2 2v11c0 1.104-.897 2-2 2h-7v2h4v2H7v-2h4v-2H4c-1.103 0-2-.896-2-2v-11zm11.2 9.838V11.6c-3.336 0-5.532 1.063-7.2 3.4.672-3.338 2.532-6.662 7.2-7.338V5L18 9.662l-4.8 4.675z"
+                        transform="matrix(43.2813 0 0 43.3063 567.187 588.59) translate(-12 -12)"
+                        vectorEffect="non-scaling-stroke"
+                    ></path>
+                    <path
+                        fill="#000"
+                        strokeWidth="0"
+                        // Circle
+                        d="M132.5 67.5c0 35.899-29.101 65-65 65-35.898 0-65-29.101-65-65 0-35.898 29.102-65 65-65 35.899 0 65 29.102 65 65z"
+                        transform="translate(229.14 230.807) scale(4.9157) translate(-67.5 -67.5)"
+                        vectorEffect="non-scaling-stroke"
+                    ></path>
+                </mask>
+            </defs>
+            <rect width="100%" height="100%" fill="var(--interactive-normal)" mask="url(#screenshareSettingsIconMask)"></rect>
+            <path
+                fill="currentColor"
+                fillRule="evenodd"
+                strokeWidth="0"
+                // Settings Icon
+                d="M19.738 10H22v4h-2.261a7.952 7.952 0 01-1.174 2.564L20 18l-2 2-1.435-1.436A7.946 7.946 0 0114 19.738V22h-4v-2.262a7.94 7.94 0 01-2.564-1.174L6 20l-2-2 1.436-1.436A7.911 7.911 0 014.262 14H2v-4h2.262a7.9 7.9 0 011.174-2.564L4 6l2-2 1.436 1.436A7.9 7.9 0 0110 4.262V2h4v2.261a7.967 7.967 0 012.565 1.174L18 3.999l2 2-1.436 1.437A7.93 7.93 0 0119.738 10zM12 16a4 4 0 100-8 4 4 0 000 8z"
+                transform="translate(229.812 230.81) scale(23.0217) translate(-12 -12)"
+                vectorEffect="non-scaling-stroke"
+            ></path>
+        </svg>;
+
+export const CameraSettingsIcon =
+    (props: React.ComponentProps<"svg">) =>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1000"
+            height="1000"
+            viewBox="0 0 1000 1000"
+            {...props}
+        >
+            <defs>
+                <mask id="m">
+                    <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M21.526 8.149a1 1 0 00-.973-.044L18 9.382V7c0-1.103-.897-2-2-2H4c-1.103 0-2 .897-2 2v10c0 1.104.897 2 2 2h12c1.103 0 2-.896 2-2v-2.382l2.553 1.276a.992.992 0 00.973-.043c.294-.183.474-.504.474-.851V9c0-.347-.18-.668-.474-.851z"
+                        transform="translate(586.527 617.666) scale(41.3472) translate(-12 -12)"
+                        vectorEffect="non-scaling-stroke"
+                    ></path>
+                    <path
+                        fill="#000"
+                        strokeWidth="0"
+                        // Circle
+                        d="M132.5 67.5c0 35.899-29.101 65-65 65-35.898 0-65-29.101-65-65 0-35.898 29.102-65 65-65 35.899 0 65 29.102 65 65z"
+                        transform="translate(229.14 230.807) scale(4.9157) translate(-67.5 -67.5)"
+                        vectorEffect="non-scaling-stroke"
+                    ></path>
+                </mask>
+            </defs>
+            <rect width="100%" height="100%" fill="var(--interactive-normal)" mask="url(#m)"></rect>
+            <path
+                fill="currentColor"
+                fillRule="evenodd"
+                strokeWidth="0"
+                // Settings Icon
+                d="M19.738 10H22v4h-2.261a7.952 7.952 0 01-1.174 2.564L20 18l-2 2-1.435-1.436A7.946 7.946 0 0114 19.738V22h-4v-2.262a7.94 7.94 0 01-2.564-1.174L6 20l-2-2 1.436-1.436A7.911 7.911 0 014.262 14H2v-4h2.262a7.9 7.9 0 011.174-2.564L4 6l2-2 1.436 1.436A7.9 7.9 0 0110 4.262V2h4v2.261a7.967 7.967 0 012.565 1.174L18 3.999l2 2-1.436 1.437A7.93 7.93 0 0119.738 10zM12 16a4 4 0 100-8 4 4 0 000 8z"
+                transform="translate(229.812 230.81) scale(23.0217) translate(-12 -12)"
+                vectorEffect="non-scaling-stroke"
+            ></path>
+        </svg>;
+
+export const MicrophoneSettingsIcon =
+    (props: React.ComponentProps<"svg">) =>
+        <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="1000"
+            height="1000"
+            viewBox="0 0 1000 1000"
+            {...props}
+        >
+            <defs>
+                <mask id="microphoneSettingsIcon">
+                    <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M14.99 11c0 1.66-1.33 3-2.99 3-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3s3 1.34 3 3l-.01 6zM12 16.1c2.76 0 5.3-2.1 5.3-5.1H19c0 3.42-2.72 6.24-6 6.72V21h-2v-3.28c-3.28-.49-6-3.31-6-6.72h1.7c0 3 2.54 5.1 5.3 5.1zM12 4c-.8 0-1 .667-1 1v6c0 .333.2 1 1 1s1-.667 1-1V5c0-.333-.2-1-1-1z"
+                        transform="translate(689.616 574.556) scale(48.6222) translate(0 -.417) scale(.8333) translate(-12 -11.5)"
+                    ></path>
+                    <path
+                        fill="currentColor"
+                        fillRule="evenodd"
+                        d="M14.99 11c0 1.66-1.33 3-2.99 3-1.66 0-3-1.34-3-3V5c0-1.66 1.34-3 3-3s3 1.34 3 3l-.01 6zM12 16.1c2.76 0 5.3-2.1 5.3-5.1H19c0 3.42-2.72 6.24-6 6.72V22h-2v-4.28c-3.28-.49-6-3.31-6-6.72h1.7c0 3 2.54 5.1 5.3 5.1z"
+                        transform="translate(689.616 574.556) scale(48.6222) scale(.8333) translate(-12 -12)"
+                    ></path>
+                    <path
+                        fill="#000"
+                        strokeWidth="0"
+                        // Circle
+                        d="M132.5 67.5c0 35.899-29.101 65-65 65-35.898 0-65-29.101-65-65 0-35.898 29.102-65 65-65 35.899 0 65 29.102 65 65z"
+                        transform="translate(229.14 230.807) scale(4.9157) translate(-67.5 -67.5)"
+                        vectorEffect="non-scaling-stroke"
+                    ></path>
+                </mask>
+            </defs>
+            <rect width="100%" height="100%" fill="var(--interactive-normal)" mask="url(#microphoneSettingsIcon)"></rect>
+            <path
+                fill="currentColor"
+                fillRule="evenodd"
+                strokeWidth="0"
+                // Settings Icon
+                d="M19.738 10H22v4h-2.261a7.952 7.952 0 01-1.174 2.564L20 18l-2 2-1.435-1.436A7.946 7.946 0 0114 19.738V22h-4v-2.262a7.94 7.94 0 01-2.564-1.174L6 20l-2-2 1.436-1.436A7.911 7.911 0 014.262 14H2v-4h2.262a7.9 7.9 0 011.174-2.564L4 6l2-2 1.436 1.436A7.9 7.9 0 0110 4.262V2h4v2.261a7.967 7.967 0 012.565 1.174L18 3.999l2 2-1.436 1.437A7.93 7.93 0 0119.738 10zM12 16a4 4 0 100-8 4 4 0 000 8z"
+                transform="translate(229.812 230.81) scale(23.0217) translate(-12 -12)"
+                vectorEffect="non-scaling-stroke"
+            ></path>
+        </svg>;
+export const DeafenIcon = (props: React.ComponentProps<"svg">) => {
+    const isFakeD = fakeD;
+
+    return (
+        <svg
+            aria-hidden="true"
+            role="img"
+            width="20"
+            height="20"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+        >
+            {isFakeD ? (
+                <>
+                    {
+                        <><svg width="24" height="24" viewBox="0 0 24 24"><path d="M12 2.00305C6.486 2.00305 2 6.48805 2 12.0031V20.0031C2 21.1071 2.895 22.0031 4 22.0031H6C7.104 22.0031 8 21.1071 8 20.0031V17.0031C8 15.8991 7.104 15.0031 6 15.0031H4V12.0031C4 7.59105 7.589 4.00305 12 4.00305C16.411 4.00305 20 7.59105 20 12.0031V15.0031H18C16.896 15.0031 16 15.8991 16 17.0031V20.0031C16 21.1071 16.896 22.0031 18 22.0031H20C21.104 22.0031 22 21.1071 22 20.0031V12.0031C22 6.48805 17.514 2.00305 12 2.00305Z" fill="var(--interactive-normal)"></path></svg></>
+                    }
+                </>
+            ) : (
+                <>
+                    {
+                        <><path d="M6.16204 15.0065C6.10859 15.0022 6.05455 15 6 15H4V12C4 7.588 7.589 4 12 4C13.4809 4 14.8691 4.40439 16.0599 5.10859L17.5102 3.65835C15.9292 2.61064 14.0346 2 12 2C6.486 2 2 6.485 2 12V19.1685L6.16204 15.0065Z" fill="var(--interactive-normal)"></path><path d="M19.725 9.91686C19.9043 10.5813 20 11.2796 20 12V15H18C16.896 15 16 15.896 16 17V20C16 21.104 16.896 22 18 22H20C21.105 22 22 21.104 22 20V12C22 10.7075 21.7536 9.47149 21.3053 8.33658L19.725 9.91686Z" fill="var(--interactive-normal)"></path><path d="M3.20101 23.6243L1.7868 22.2101L21.5858 2.41113L23 3.82535L3.20101 23.6243Z" fill="currentColor"></path></>
+                    }
+                </>
+            )}
+        </svg>
+    );
+};

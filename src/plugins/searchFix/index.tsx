@@ -29,18 +29,19 @@ export default definePlugin({
             find: ".displayName=\"SearchStore\";",
             replacement: {
                 match: /(\i)\.offset=null!==\((\i)=(\i)\.offset\)&&void 0!==(\i)\?(\i):0/i,
-                replace: (_, v, v1, query, v3, v4) => `$self.main(${query}), ${v}.offset = null !== (${v1} = ${query}.offset) && void 0 !== ${v3} ? ${v4} : 0`
+                replace: (_, v, v1,query,v3,v4) => `$self.main(${query}), ${v}.offset = null !== (${v1} = ${query}.offset) && void 0 !== ${v3} ? ${v4} : 0`
             }
         }
     ],
-    main(query) {
-        if (query.offset <= 5000) return;
-        query.sort_order = query.sort_order === "asc" ? "desc" : "asc";
+    main(query){
+        if (query.offset > 5000) {
+            query.sort_order = query.sort_order === "asc" ? "desc" : "asc";
 
-        if (query.offset > 5000 - 5000) {
-            query.offset = 0;
-        } else {
-            query.offset -= 5000;
+            if (query.offset > 5000 - 5000) {
+                query.offset = 0;
+            } else {
+                query.offset -= 5000;
+            }
         }
     }
 });

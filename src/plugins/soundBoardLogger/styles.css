@@ -56,7 +56,7 @@
     width: fit-content;
 }
 
-.vc-soundlog-more-soundid,
+.vc-soundlog-more-soundId,
 .vc-soundlog-user-name {
     text-transform: none;
     flex-grow: 0;
@@ -69,7 +69,7 @@
     text-wrap: nowrap;
 }
 
-.vc-soundlog-more-soundid {
+.vc-soundlog-more-soundId {
     background: unset;
 }
 

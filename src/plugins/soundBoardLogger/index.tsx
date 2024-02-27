@@ -1,16 +1,16 @@
 /*
  * Vencord, a Discord client mod
- * Copyright (c) 2023 Vendicated and contributors
+ * Copyright (c) 2024 Vendicated and contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
-import { disableStyle, enableStyle } from "@api/Styles";
+import { disableStyle,enableStyle } from "@api/Styles";
 import ErrorBoundary from "@components/ErrorBoundary";
 import { Devs } from "@utils/constants";
 import definePlugin from "@utils/types";
 import { FluxDispatcher } from "@webpack/common";
 
-import { IconWithTooltip, LogIcon } from "./components/Icons";
+import { IconWithTooltip,LogIcon } from "./components/Icons";
 import { openSoundBoardLog } from "./components/SoundBoardLog";
 import settings from "./settings";
 import { updateLoggedSounds } from "./store";
@@ -22,8 +22,7 @@ export default definePlugin({
     authors: [
         Devs.ImpishMoxxie,
         Devs.fres,
-        Devs.echo,
-        Devs.thororen
+        Devs.echo
     ],
     settings,
     patches: [

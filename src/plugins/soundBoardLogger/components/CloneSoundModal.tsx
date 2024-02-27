@@ -1,6 +1,6 @@
 /*
  * Vencord, a Discord client mod
- * Copyright (c) 2023 Vendicated and contributors
+ * Copyright (c) 2024 Vendicated and contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -154,7 +154,7 @@ export function CloneSoundModal({ item, closeModal }: { item: SoundEvent, closeM
                         showToast("Error fetching the sound", Toasts.Type.FAILURE);
                         return;
                     }
-                    response.body.getReader().read().then(function (result) {
+                    response.body.getReader().read().then(function(result) {
                         if (!result.value) {
                             setLoadingButton(false);
                             showToast("Error reading the sound content", Toasts.Type.FAILURE);

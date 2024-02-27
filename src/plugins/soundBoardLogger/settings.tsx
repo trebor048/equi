@@ -1,6 +1,6 @@
 /*
  * Vencord, a Discord client mod
- * Copyright (c) 2023 Vendicated and contributors
+ * Copyright (c) 2024 Vendicated and contributors
  * SPDX-License-Identifier: GPL-3.0-or-later
  */
 
@@ -63,15 +63,6 @@ const settings = definePluginSettings({
             );
         }
 
-    },
-    FileType: {
-        description: "the format that you want to save your file",
-        type: OptionType.SELECT,
-        options: [
-            { label: ".ogg", value: ".ogg", default: true },
-            { label: ".mp3", value: ".mp3" },
-            { label: ".wav", value: ".wav" },
-        ],
     },
     IconLocation: {
         description: "choose where to show the SoundBoard Log icon (requires restart)",

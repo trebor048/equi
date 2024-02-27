@@ -262,6 +262,15 @@ function makeLinkProps(name: string, condition: unknown, path: string) {
         onContextMenu: makeContextMenu(name, path)
     } satisfies React.HTMLAttributes<HTMLElement>;
 }
+function Background({ track, rotate = false }: { track: Track; rotate?: Boolean; }) {
+    const img = track?.album?.image;
+    return (
+        <>
+            {img && (<img id={cl("background-image")} className={rotate ? cl("rotate") : ""} src={img.url} alt="Album Image Background" />)
+            }
+        </>
+    );
+}
 
 function Info({ track }: { track: Track; }) {
     const img = track?.album?.image;
@@ -340,7 +349,7 @@ function Info({ track }: { track: Track; }) {
     );
 }
 
-export function Player() {
+export function Player({ useBg, rotateBg }: { useBg: Boolean; rotateBg: Boolean; }) {
     const track = useStateFromStores(
         [SpotifyStore],
         () => SpotifyStore.track,
@@ -379,6 +388,8 @@ export function Player() {
             </div>
         )}>
             <div id={cl("player")}>
+                {useBg && <Background track={track} />}
+                {(useBg && rotateBg) && <Background track={track} rotate={true} />}
                 <Info track={track} />
                 <SeekBar />
                 <Controls />

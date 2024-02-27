@@ -23,21 +23,10 @@ import { Logger } from "@utils/Logger";
 import { Margins } from "@utils/margins";
 import { wordsToTitle } from "@utils/text";
 import definePlugin, { OptionType, PluginOptionsItem } from "@utils/types";
-import { findByPropsLazy } from "@webpack";
+import { findStoreLazy } from "@webpack";
 import { Button, ChannelStore, Forms, GuildMemberStore, SelectedChannelStore, SelectedGuildStore, useMemo, UserStore } from "@webpack/common";
-
-interface VoiceState {
-    userId: string;
-    channelId?: string;
-    oldChannelId?: string;
-    deaf: boolean;
-    mute: boolean;
-    selfDeaf: boolean;
-    selfMute: boolean;
-}
-
-const VoiceStateStore = findByPropsLazy("getVoiceStatesForChannel", "getCurrentClientVoiceChannelId");
-
+import { VoiceState } from "@webpack/types";
+const VoiceStateStore = findStoreLazy("VoiceStateStore");
 // Mute/Deaf for other people than you is commented out, because otherwise someone can spam it and it will be annoying
 // Filtering out events is not as simple as just dropping duplicates, as otherwise mute, unmute, mute would
 // not say the second mute, which would lead you to believe they're unmuted
@@ -167,6 +156,7 @@ export default definePlugin({
             for (const state of voiceStates) {
                 const { userId, channelId, oldChannelId } = state;
                 const isMe = userId === myId;
+                if (isMe && Settings.plugins.VcNarrator.ignoreSelf) return;
                 if (!isMe) {
                     if (!myChanId) continue;
                     if (channelId !== myChanId && oldChannelId !== myChanId) continue;
@@ -188,6 +178,7 @@ export default definePlugin({
         },
 
         AUDIO_TOGGLE_SELF_MUTE() {
+            if (Settings.plugins.VcNarrator.ignoreSelf) return;
             const chanId = SelectedChannelStore.getVoiceChannelId()!;
             const s = VoiceStateStore.getVoiceStateForChannel(chanId) as VoiceState;
             if (!s) return;
@@ -197,6 +188,7 @@ export default definePlugin({
         },
 
         AUDIO_TOGGLE_SELF_DEAF() {
+            if (Settings.plugins.VcNarrator.ignoreSelf) return;
             const chanId = SelectedChannelStore.getVoiceChannelId()!;
             const s = VoiceStateStore.getVoiceStateForChannel(chanId) as VoiceState;
             if (!s) return;
@@ -220,6 +212,12 @@ export default definePlugin({
 
     get options() {
         return this.optionsCache ??= {
+
+            ignoreSelf: {
+                type: OptionType.BOOLEAN,
+                description: "Do not say your own actions",
+                default: true
+            },
             voice: {
                 type: OptionType.SELECT,
                 description: "Narrator Voice",

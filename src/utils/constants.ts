@@ -191,7 +191,7 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         id: 296776625432035328n,
     },
     TheSun: {
-        name: "ActuallyTheSun",
+        name: "sunnie",
         id: 406028027768733696n
     },
     axyie: {
@@ -335,6 +335,10 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "rad",
         id: 610945092504780823n
     },
+    keifufu: {
+        name: "keifufu",
+        id: 469588398110146590n
+    },
     AndrewDLO: {
         name: "Andrew-DLO",
         id: 434135504792059917n
@@ -459,6 +463,10 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "maisy",
         id: 257109471589957632n,
     },
+    Max: {
+        name: "Max",
+        id: 1189527130611138663n,
+    },
     GeorgeV22: {
         name: "GeorgeV22",
         id: 261487490769092608n,
@@ -499,6 +507,38 @@ export const Devs = /* #__PURE__*/ Object.freeze({
         name: "Jaxx",
         id: 901016640253227059n,
     },
+    evergreen: {
+        name: "evergreen",
+        id: 676093688056905759n,
+    },
+    Pancakes: {
+        name: "Pancakes",
+        id: 833153725911924767n,
+    },
+    Sqaaakoi: {
+        name: "Sqaaakoi",
+        id: 259558259491340288n,
+    },
+    Av32000: {
+        name: "Av32000",
+        id: 593436735380127770n,
+    },
+    SpikeHD: {
+        name: "SpikeHD",
+        id: 221757857836564485n
+    },
+    Ethan: {
+        name: "Ethan",
+        id: 721717126523781240n
+    },
+    dat_insanity: {
+        name: "dat_insanity",
+        id: 896891667469172778n
+    },
+    lucky: {
+        name: "LuckyCanucky",
+        id: 0n
+    }
 } satisfies Record<string, Dev>);
 
 // iife so #__PURE__ works correctly
