@@ -1,6 +1,6 @@
-# shitty Equicord (Vencord+)
+# shitty cord
 
-An shittier version of [Vencord](https://github.com/Vendicated/Vencord) by [Vendicated](https://github.com/Vendicated) called shit
+An shittier version of [Vencord](https://github.com/Vendicated/Vencord) by [Vendicated](https://github.com/Vendicated) called shitty cord
 
 ## Features
 
@@ -8,6 +8,6 @@ An shittier version of [Vencord](https://github.com/Vendicated/Vencord) by [Vend
 -    themes tab is broken shut up
 
 
-### Installing shitty Equicord
+### Installing shitty cord
 
 u know the drill
