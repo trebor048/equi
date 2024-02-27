@@ -97,3 +97,4 @@ Additionally, make sure not to post screenshots with Equicord in a server where 
 </details>
 
 Plugins may take time to be added as I am not on all of the time because of school and stuff.
+"# equi" 
